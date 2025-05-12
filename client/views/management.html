@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Création d'examen</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/management.css">
+</head>
+<body>
+  <div class="exam-interface">
+    <header class="header">
+      <h1>🎓 Création d'examen</h1>
+      <div class="tab-buttons">
+        <button class="tab-button active" data-tab="create">Créer un examen</button>
+        <button class="tab-button" data-tab="myexams">Mes examens</button>
+      </div>
+    </header>
+
+    <main class="tab-content">
+      <section id="create" class="tab-pane active">
+        <div class="card-section">
+          <h2>Nouvel Examen</h2>
+          <form id="exam-form">
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="exam-title" class="form-label">Titre</label>
+                <input type="text" class="form-control" id="exam-title" name="exam-title" required>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="sem" class="form-label">Semestre</label>
+                <input type="number" class="form-control" id="sem" name="sem" required>
+              </div>
+            </div>
+          
+            <div class="mb-3">
+              <label for="exam-description" class="form-label">Description</label>
+              <textarea class="form-control" id="exam-description" name="exam-description" rows="2"></textarea>
+            </div>
+          </form>
+          
+          <hr class="my-5">
+          <h2>Ajout de Questions</h2>
+          
+          <div class="mb-3">
+            <label for="question-type" class="form-label">Type de question</label>
+            <select class="form-select" id="question-type">
+              <option value="directe">Question Directe</option>
+              <option value="qcm">QCM</option>
+            </select>
+          </div>
+          
+          <div id="question-form-container" class="mb-4">
+<div id="question-form-container" class="mb-4">
+  <div class="mb-3">
+    <label class="form-label">Intitulé de la question</label>
+    <input type="text" class="form-control" id="question-text">
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Fichier (facultatif)</label>
+    <input type="file" class="form-control" id="question-file">
+  </div>
+
+  <div id="qcm-fields" class="d-none">
+    <div class="mb-3">
+      <label class="form-label">Options</label>
+      <input type="text" class="form-control qcm-option" placeholder="Option 1">
+      <input type="text" class="form-control qcm-option" placeholder="Option 2">
+      <input type="text" class="form-control qcm-option" placeholder="Option 3">
+      <input type="text" class="form-control qcm-option" placeholder="Option 4">
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Numéro de la bonne réponse (1-4)</label>
+      <input type="number" class="form-control" id="correct-answer" min="1" max="4">
+    </div>
+  </div>
+
+  <!-- Direct Question Section -->
+  <div id="direct-fields" class="d-none">
+    <div class="mb-3">
+      <label class="form-label">Réponse attendue</label>
+      <input type="text" class="form-control" id="expected-answer">
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Tolérance (%)</label>
+      <input type="number" class="form-control" id="tolerance" min="0" max="100" value="100">
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Temps (en secondes)</label>
+      <input type="number" class="form-control" id="timer" min="10" value="60">
+    </div>
+  </div>
+</div>
+
+          </div>
+          
+          <button class="btn btn-primary mb-3" id="add-question">Ajouter une question</button>
+          
+          <div id="question-list" class="mb-4">
+            <h4>Questions ajoutées</h4>
+            <div class="row" id="questions"></div>
+          </div>
+          
+          <!-- Save exam -->
+          <button id="save-exam-btn" class="submit-btn">Save Exam</button>
+          
+        </div>
+      </section>
+
+      <section id="myexams" class="tab-pane">
+        <div class="card-section">
+          <h2>Mes examens</h2>
+          <p id="no-exams-msg" class="d-none">Aucun examen trouvé.</p>
+          <div id="exam-list" class="row"></div>
+        </div>
+      </section>
+    </main>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="/js/navbar.js" defer></script>
+  <script src="/js/management.js"></script>
+</body>
+</html>

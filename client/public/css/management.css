@@ -1,0 +1,229 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f4f6fa;
+  color: #333;
+  overflow-x: hidden;
+}
+
+.exam-interface {
+  max-width: 960px;
+  margin: auto;
+  padding: 2rem 1rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.tab-buttons {
+  margin-top: 1rem;
+}
+
+.tab-button {
+  background: none;
+  border: 2px solid #0d6efd;
+  color: #0d6efd;
+  font-weight: 600;
+  padding: 8px 16px;
+  margin: 0 5px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.tab-button.active,
+.tab-button:hover {
+  background-color: #0d6efd;
+  color: white;
+}
+
+.tab-content {
+  margin-top: 1rem;
+}
+
+.tab-pane {
+  display: none;
+}
+
+.tab-pane.active {
+  display: block;
+}
+
+.card-section {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.card-section h2 {
+  margin-bottom: 1.2rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.2s ease;
+}
+
+.form-control:focus {
+  border-color: #0d6efd;
+  outline: none;
+}
+
+.link-row {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.generate-btn {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.generate-btn:hover {
+  background-color: #5a6268;
+}
+
+.submit-btn {
+  background-color: #198754;
+  color: white;
+  padding: 0.75rem 1.25rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #157347;
+}
+
+.add-btn {
+  background-color: #0d6efd;
+  color: white;
+  padding: 0.5rem 1.25rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-btn:hover {
+  background-color: #0b5ed7;
+}
+
+.question-list {
+  margin-top: 2rem;
+}
+
+.question-list ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.question-list li {
+  background-color: #f8f9fa;
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#changeable {
+  margin: auto;
+}
+
+#username {
+  margin: auto;
+  padding-right: 8px;
+  color: #20a36b;
+  font-weight: bold;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 20px 0px;
+  background-color: #ffffff;
+}
+
+.navsha {
+  transition: box-shadow 0.3s ease;
+  box-shadow: 4px 9px 28px -9px rgba(0, 0, 0, 0.75);
+}
+
+.image-container {
+  width: 190px;
+  height: 40px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.cropped-image {
+  width: 400px;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  padding-bottom: 4px;
+}
+
+.row {
+  margin-bottom: 1rem;
+}
+
+ul {
+  gap: 4px;
+}
+
+.nav-link:hover {
+  color: #11c154;
+}
+
+.nav-link {
+  font-weight: 500;
+}
+
+.join {
+  color: rgb(43, 43, 43);
+  border-color: rgb(50, 50, 50);
+}
+
+.join:hover {
+  color: rgb(255, 255, 255);
+  border-color: #11c154;
+  background-color: #11c154;
+}

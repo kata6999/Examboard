@@ -1,0 +1,116 @@
+.bodycont,
+html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.register-card {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px 50px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 700px;
+    box-sizing: border-box;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control {
+    margin-bottom: 15px;
+    border-radius: 10px;
+    padding: 10px 15px;
+    font-size: 16px;
+    transition: box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 10px rgba(58, 123, 213, 0.5);
+    border-color: #4e9bde;
+}
+
+button {
+    background-color: rgba(33, 173, 33, 0.909);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 0 20px rgba(3, 179, 41, 0.42);
+
+}
+
+button:hover {
+    background-color: rgba(0, 188, 72, 0.8);
+}
+
+button:active {
+    background-color: rgba(3, 99, 24, 0.8);
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.col-md-6 {
+    flex: 1;
+    min-width: 280px;
+}
+
+.logo-link {
+    position: fixed;
+    top: 30px;
+    left: 80px;
+    z-index: 999;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+    cursor: pointer;
+}
+
+#conn {
+    text-align: center;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .logo-link {
+        position: static;
+    }
+
+    .logo {
+        width: 80px;
+    }
+
+    .register-container {
+        margin-top: 130px;
+    }
+}
+
+#messagebox {
+    text-align: center;
+    color:  red;
+    font-weight: 500;
+    margin-bottom: 3px;
+}
